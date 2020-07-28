@@ -45,11 +45,12 @@
             this.bt0 = new System.Windows.Forms.Button();
             this.btlimpar = new System.Windows.Forms.Button();
             this.txtresult = new System.Windows.Forms.MaskedTextBox();
+            this.txthistorico = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // bt7
             // 
-            this.bt7.Location = new System.Drawing.Point(25, 66);
+            this.bt7.Location = new System.Drawing.Point(25, 88);
             this.bt7.Name = "bt7";
             this.bt7.Size = new System.Drawing.Size(55, 23);
             this.bt7.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // bt8
             // 
-            this.bt8.Location = new System.Drawing.Point(86, 66);
+            this.bt8.Location = new System.Drawing.Point(86, 88);
             this.bt8.Name = "bt8";
             this.bt8.Size = new System.Drawing.Size(55, 23);
             this.bt8.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // bt9
             // 
-            this.bt9.Location = new System.Drawing.Point(147, 66);
+            this.bt9.Location = new System.Drawing.Point(147, 88);
             this.bt9.Name = "bt9";
             this.bt9.Size = new System.Drawing.Size(55, 23);
             this.bt9.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             // btsoma
             // 
-            this.btsoma.Location = new System.Drawing.Point(208, 66);
+            this.btsoma.Location = new System.Drawing.Point(208, 88);
             this.btsoma.Name = "btsoma";
             this.btsoma.Size = new System.Drawing.Size(39, 23);
             this.btsoma.TabIndex = 4;
@@ -89,7 +90,7 @@
             // 
             // btsub
             // 
-            this.btsub.Location = new System.Drawing.Point(208, 95);
+            this.btsub.Location = new System.Drawing.Point(208, 117);
             this.btsub.Name = "btsub";
             this.btsub.Size = new System.Drawing.Size(39, 23);
             this.btsub.TabIndex = 8;
@@ -99,7 +100,7 @@
             // 
             // bt6
             // 
-            this.bt6.Location = new System.Drawing.Point(147, 95);
+            this.bt6.Location = new System.Drawing.Point(147, 117);
             this.bt6.Name = "bt6";
             this.bt6.Size = new System.Drawing.Size(55, 23);
             this.bt6.TabIndex = 7;
@@ -109,7 +110,7 @@
             // 
             // bt5
             // 
-            this.bt5.Location = new System.Drawing.Point(86, 95);
+            this.bt5.Location = new System.Drawing.Point(86, 117);
             this.bt5.Name = "bt5";
             this.bt5.Size = new System.Drawing.Size(55, 23);
             this.bt5.TabIndex = 6;
@@ -119,7 +120,7 @@
             // 
             // bt4
             // 
-            this.bt4.Location = new System.Drawing.Point(25, 95);
+            this.bt4.Location = new System.Drawing.Point(25, 117);
             this.bt4.Name = "bt4";
             this.bt4.Size = new System.Drawing.Size(55, 23);
             this.bt4.TabIndex = 5;
@@ -129,7 +130,7 @@
             // 
             // btdiv
             // 
-            this.btdiv.Location = new System.Drawing.Point(208, 124);
+            this.btdiv.Location = new System.Drawing.Point(208, 146);
             this.btdiv.Name = "btdiv";
             this.btdiv.Size = new System.Drawing.Size(39, 23);
             this.btdiv.TabIndex = 12;
@@ -139,7 +140,7 @@
             // 
             // bt3
             // 
-            this.bt3.Location = new System.Drawing.Point(147, 124);
+            this.bt3.Location = new System.Drawing.Point(147, 146);
             this.bt3.Name = "bt3";
             this.bt3.Size = new System.Drawing.Size(55, 23);
             this.bt3.TabIndex = 11;
@@ -149,7 +150,7 @@
             // 
             // bt2
             // 
-            this.bt2.Location = new System.Drawing.Point(86, 124);
+            this.bt2.Location = new System.Drawing.Point(86, 146);
             this.bt2.Name = "bt2";
             this.bt2.Size = new System.Drawing.Size(55, 23);
             this.bt2.TabIndex = 10;
@@ -159,7 +160,7 @@
             // 
             // bt1
             // 
-            this.bt1.Location = new System.Drawing.Point(25, 124);
+            this.bt1.Location = new System.Drawing.Point(25, 146);
             this.bt1.Name = "bt1";
             this.bt1.Size = new System.Drawing.Size(55, 23);
             this.bt1.TabIndex = 9;
@@ -169,7 +170,7 @@
             // 
             // btmult
             // 
-            this.btmult.Location = new System.Drawing.Point(208, 153);
+            this.btmult.Location = new System.Drawing.Point(208, 175);
             this.btmult.Name = "btmult";
             this.btmult.Size = new System.Drawing.Size(39, 23);
             this.btmult.TabIndex = 16;
@@ -179,7 +180,7 @@
             // 
             // btresult
             // 
-            this.btresult.Location = new System.Drawing.Point(147, 153);
+            this.btresult.Location = new System.Drawing.Point(147, 175);
             this.btresult.Name = "btresult";
             this.btresult.Size = new System.Drawing.Size(55, 23);
             this.btresult.TabIndex = 15;
@@ -189,7 +190,7 @@
             // 
             // bt0
             // 
-            this.bt0.Location = new System.Drawing.Point(86, 153);
+            this.bt0.Location = new System.Drawing.Point(86, 175);
             this.bt0.Name = "bt0";
             this.bt0.Size = new System.Drawing.Size(55, 23);
             this.bt0.TabIndex = 14;
@@ -199,7 +200,7 @@
             // 
             // btlimpar
             // 
-            this.btlimpar.Location = new System.Drawing.Point(25, 153);
+            this.btlimpar.Location = new System.Drawing.Point(25, 175);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(55, 23);
             this.btlimpar.TabIndex = 13;
@@ -209,16 +210,31 @@
             // 
             // txtresult
             // 
-            this.txtresult.Location = new System.Drawing.Point(25, 17);
+            this.txtresult.Enabled = false;
+            this.txtresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtresult.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtresult.Location = new System.Drawing.Point(25, 41);
             this.txtresult.Name = "txtresult";
-            this.txtresult.Size = new System.Drawing.Size(222, 20);
+            this.txtresult.Size = new System.Drawing.Size(222, 26);
             this.txtresult.TabIndex = 17;
+            this.txtresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txthistorico
+            // 
+            this.txthistorico.Enabled = false;
+            this.txthistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthistorico.Location = new System.Drawing.Point(25, 22);
+            this.txthistorico.Name = "txthistorico";
+            this.txthistorico.Size = new System.Drawing.Size(222, 20);
+            this.txthistorico.TabIndex = 18;
+            this.txthistorico.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 200);
+            this.ClientSize = new System.Drawing.Size(283, 236);
+            this.Controls.Add(this.txthistorico);
             this.Controls.Add(this.txtresult);
             this.Controls.Add(this.btmult);
             this.Controls.Add(this.btresult);
@@ -262,6 +278,7 @@
         private System.Windows.Forms.Button bt0;
         private System.Windows.Forms.Button btlimpar;
         private System.Windows.Forms.MaskedTextBox txtresult;
+        private System.Windows.Forms.MaskedTextBox txthistorico;
     }
 }
 

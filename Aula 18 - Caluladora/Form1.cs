@@ -22,6 +22,7 @@ namespace Aula_18___Caluladora
             ultimoNumero = 0;
             operador = "+";
             txtresult.Text = "0";
+            txthistorico.Text = "";
         }
 
         private void Calcular()
@@ -51,7 +52,6 @@ namespace Aula_18___Caluladora
         {
             InitializeComponent();
             Limpar();
-
         }
 
         // FUNÇÕES DE CLIQUE DE BOTÕES
@@ -60,14 +60,26 @@ namespace Aula_18___Caluladora
             if (ultimoNumero == 0)
             {
                 txtresult.Text = (sender as Button).Text;
+
+                if (txthistorico.Text.EndsWith("="))
+                {
+                    txthistorico.Text = (sender as Button).Text;
+                }
+                else
+                {
+                    txthistorico.Text = txthistorico.Text + (sender as Button).Text;
+                }
+                
             }
             else
-            { 
+            {
                 txtresult.Text = txtresult.Text + (sender as Button).Text;
+                txthistorico.Text = txthistorico.Text + (sender as Button).Text;
             }
 
-            //txtresult.Text = txtresult.Text + (sender as Button).Text;
             ultimoNumero = Convert.ToDouble(txtresult.Text);
+            //ultimoNumero = Convert.ToDouble(txthistorico.Text);
+            
         }
 
         private void operadores(object sender, EventArgs e)
@@ -75,6 +87,16 @@ namespace Aula_18___Caluladora
             ultimoNumero = Convert.ToDouble(txtresult.Text);
             Calcular();
             operador = (sender as Button).Text;
+
+            if (txthistorico.Text.EndsWith("="))
+            {
+                txthistorico.Text = txtresult.Text + (sender as Button).Text;
+            }
+            else
+            {
+                txthistorico.Text = txthistorico.Text + (sender as Button).Text;
+            }
+            
         }
 
         private void btresult_Click(object sender, EventArgs e)
@@ -83,6 +105,7 @@ namespace Aula_18___Caluladora
             Calcular();
             operador = "+";
             total = 0;
+            txthistorico.Text = txthistorico.Text + (sender as Button).Text;
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
