@@ -1,0 +1,14 @@
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\bin\Debug\Aula 18 - Caluladora.exe.config
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\bin\Debug\Aula 18 - Caluladora.exe
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\bin\Debug\Aula 18 - Caluladora.pdb
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.csprojAssemblyReference.cache
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula_18___Caluladora.Form1.resources
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula_18___Caluladora.Properties.Resources.resources
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.csproj.GenerateResource.cache
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.csproj.CoreCompileInputs.cache
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.exe
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.pdb
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\bin\Debug\Aula 18 - Caluladora.exe.manifest
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\bin\Debug\Aula 18 - Caluladora.application
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.exe.manifest
+E:\Projetos\C# Hugo Cursos\Aula 18 - Caluladora\Aula 18 - Caluladora\obj\Debug\Aula 18 - Caluladora.application
