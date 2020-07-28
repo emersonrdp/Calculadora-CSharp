@@ -64,8 +64,10 @@ namespace Aula_18___Caluladora
             else
             { 
                 txtresult.Text = txtresult.Text + (sender as Button).Text;
-                ultimoNumero = Convert.ToDouble(txtresult.Text);
             }
+
+            //txtresult.Text = txtresult.Text + (sender as Button).Text;
+            ultimoNumero = Convert.ToDouble(txtresult.Text);
         }
 
         private void operadores(object sender, EventArgs e)
