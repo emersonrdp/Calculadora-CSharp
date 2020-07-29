@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Aula 18 - Caluladora.exe" size="14816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Aula 18 - Caluladora.exe" size="13280">
       <assemblyIdentity name="Aula 18 - Caluladora" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+yhQujUkBYHQJMWNk2sWHnVjLpMVamyAGDbJLnosgEM=</dsig:DigestValue>
+        <dsig:DigestValue>qfaaZ0jH80dNWDFSfe1GzEP5fO8GNjAT5Dx7E2HXKoI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -41,18 +41,13 @@ namespace Aula_18___Caluladora
                 case "/":
                     total /= ultimoNumero;
                     break;
-                case "mod":
-                    total = total % ultimoNumero;
-                    break;
-                /*case "%":
-                    total = total * ( 1 + ( ultimoNumero / 100 );
-                    break;*/            // x*(1+(y/100))    calculo de percentual -> y% de x
             }
 
             ultimoNumero = 0;
             txtresult.Text = total.ToString();
         }
         
+
         public Form1()
         {
             InitializeComponent();
@@ -64,57 +59,53 @@ namespace Aula_18___Caluladora
         {
             if (ultimoNumero == 0)
             {
-                /* Se o ultimonumero for 0 não vai mostrar o numero no histórico, após digitar um operador ou  a 
-                    igualdade sempre vai fazer o calculo e após o calculo o ultimonumero e zerado.  
-                    Ao digitar numero nunca vai mostrar o numero no histórico, so é mostrado no hitórico ao lançar o operador
-                    ou o resultado.*/
+                txtresult.Text = (sender as Button).Text;
 
-                 if ((sender as Button).Text == "," || txtresult.Text == "0,")
-                 {
-                     txtresult.Text = txtresult.Text + (sender as Button).Text;
-                 }
-                 else
-                 {
-                     txtresult.Text = (sender as Button).Text;
-                    
-                 }  
+                if (txthistorico.Text.EndsWith("="))
+                {
+                    txthistorico.Text = (sender as Button).Text;
+                }
+                else
+                {
+                    txthistorico.Text = txthistorico.Text + (sender as Button).Text;
+                }
+                
             }
             else
             {
                 txtresult.Text = txtresult.Text + (sender as Button).Text;
-                //txthistorico.Text = txthistorico.Text + (sender as Button).Text;
+                txthistorico.Text = txthistorico.Text + (sender as Button).Text;
             }
 
             ultimoNumero = Convert.ToDouble(txtresult.Text);
-           
+            //ultimoNumero = Convert.ToDouble(txthistorico.Text);
+            
         }
 
         private void operadores(object sender, EventArgs e)
         {
-            // verificaçãose a ultima letra é "=" no campo do histórico do calculo
+            ultimoNumero = Convert.ToDouble(txtresult.Text);
+            Calcular();
+            operador = (sender as Button).Text;
+
             if (txthistorico.Text.EndsWith("="))
             {
                 txthistorico.Text = txtresult.Text + (sender as Button).Text;
             }
             else
             {
-                txthistorico.Text = txthistorico.Text + txtresult.Text + (sender as Button).Text;
+                txthistorico.Text = txthistorico.Text + (sender as Button).Text;
             }
-
-            ultimoNumero = Convert.ToDouble(txtresult.Text);
-            Calcular();
-            operador = (sender as Button).Text;
             
         }
 
         private void btresult_Click(object sender, EventArgs e)
         {
-            txthistorico.Text = txthistorico.Text + txtresult.Text + (sender as Button).Text;
             ultimoNumero = Convert.ToDouble(txtresult.Text);
             Calcular();
             operador = "+";
             total = 0;
-
+            txthistorico.Text = txthistorico.Text + (sender as Button).Text;
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
@@ -125,5 +116,3 @@ namespace Aula_18___Caluladora
        
     }
 }
-
-// implementação dos botões mod (resto da divisão), virgula apra casas decimais e melhorias no histórico - 28/07/2020
