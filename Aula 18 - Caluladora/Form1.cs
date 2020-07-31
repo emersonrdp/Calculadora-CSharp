@@ -12,7 +12,7 @@ namespace Aula_18___Caluladora
 {
     public partial class Form1 : Form
     {
-        double total, ultimoNumero;
+        double total, ultimoNumero, trocaSinal;
         string operador;
 
         // MÉTODOS
@@ -23,6 +23,7 @@ namespace Aula_18___Caluladora
             operador = "+";
             txtresult.Text = "0";
             txthistorico.Text = "";
+            bt_trocasinal.Enabled = true;
         }
 
         private void Calcular()
@@ -86,7 +87,7 @@ namespace Aula_18___Caluladora
             }
 
             ultimoNumero = Convert.ToDouble(txtresult.Text);
-           
+            bt_trocasinal.Enabled = true;
         }
 
         private void operadores(object sender, EventArgs e)
@@ -104,7 +105,7 @@ namespace Aula_18___Caluladora
             ultimoNumero = Convert.ToDouble(txtresult.Text);
             Calcular();
             operador = (sender as Button).Text;
-            
+            bt_trocasinal.Enabled = false;
         }
 
         private void btresult_Click(object sender, EventArgs e)
@@ -114,14 +115,19 @@ namespace Aula_18___Caluladora
             Calcular();
             operador = "+";
             total = 0;
+            bt_trocasinal.Enabled = true;
+        }
 
+        private void bt_trocasinal_Click(object sender, EventArgs e)
+        {
+            trocaSinal = Convert.ToDouble(txtresult.Text) * (-1);
+            txtresult.Text = trocaSinal.ToString();
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
         {
             Limpar();
-        }
-
-       
+        }     
     }
 }
+// depois verificar como alterar para que ao clicar no botão operador mais de uma vz não fiu fazendo contas sem digitar numeros
