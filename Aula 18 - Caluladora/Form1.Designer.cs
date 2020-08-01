@@ -46,10 +46,10 @@
             this.btlimpar = new System.Windows.Forms.Button();
             this.txtresult = new System.Windows.Forms.MaskedTextBox();
             this.txthistorico = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.bt_trocasinal = new System.Windows.Forms.Button();
+            this.btapagar = new System.Windows.Forms.Button();
+            this.btvirgula = new System.Windows.Forms.Button();
+            this.btmod = new System.Windows.Forms.Button();
+            this.bttrocasinal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt7
@@ -87,7 +87,7 @@
             // 
             // btsoma
             // 
-            this.btsoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsoma.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsoma.Location = new System.Drawing.Point(260, 281);
             this.btsoma.Name = "btsoma";
             this.btsoma.Size = new System.Drawing.Size(68, 31);
@@ -98,7 +98,7 @@
             // 
             // btsub
             // 
-            this.btsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btsub.Location = new System.Drawing.Point(259, 244);
             this.btsub.Name = "btsub";
             this.btsub.Size = new System.Drawing.Size(68, 31);
@@ -142,12 +142,12 @@
             // 
             // btdiv
             // 
-            this.btdiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btdiv.Location = new System.Drawing.Point(259, 171);
             this.btdiv.Name = "btdiv";
             this.btdiv.Size = new System.Drawing.Size(68, 31);
             this.btdiv.TabIndex = 12;
-            this.btdiv.Text = "/";
+            this.btdiv.Text = "÷";
             this.btdiv.UseVisualStyleBackColor = true;
             this.btdiv.Click += new System.EventHandler(this.operadores);
             // 
@@ -186,7 +186,7 @@
             // 
             // btmult
             // 
-            this.btmult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmult.Location = new System.Drawing.Point(260, 208);
             this.btmult.Name = "btmult";
             this.btmult.Size = new System.Drawing.Size(68, 31);
@@ -197,7 +197,7 @@
             // 
             // btresult
             // 
-            this.btresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btresult.Location = new System.Drawing.Point(186, 281);
             this.btresult.Name = "btresult";
             this.btresult.Size = new System.Drawing.Size(68, 31);
@@ -249,59 +249,60 @@
             this.txthistorico.TabIndex = 18;
             this.txthistorico.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button1
+            // btapagar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(260, 135);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 31);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "←";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btapagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btapagar.Location = new System.Drawing.Point(260, 135);
+            this.btapagar.Name = "btapagar";
+            this.btapagar.Size = new System.Drawing.Size(68, 31);
+            this.btapagar.TabIndex = 22;
+            this.btapagar.Text = "←";
+            this.btapagar.UseVisualStyleBackColor = true;
+            this.btapagar.Click += new System.EventHandler(this.btapagar_Click);
             // 
-            // button2
+            // btvirgula
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(186, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 31);
-            this.button2.TabIndex = 21;
-            this.button2.Text = ",";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.gerarnumero);
+            this.btvirgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btvirgula.Location = new System.Drawing.Point(186, 244);
+            this.btvirgula.Name = "btvirgula";
+            this.btvirgula.Size = new System.Drawing.Size(68, 31);
+            this.btvirgula.TabIndex = 21;
+            this.btvirgula.Text = ",";
+            this.btvirgula.UseVisualStyleBackColor = true;
+            this.btvirgula.Click += new System.EventHandler(this.gerarnumero);
             // 
-            // button3
+            // btmod
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(112, 281);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 31);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "mod";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.operadores);
+            this.btmod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmod.Location = new System.Drawing.Point(112, 281);
+            this.btmod.Name = "btmod";
+            this.btmod.Size = new System.Drawing.Size(68, 31);
+            this.btmod.TabIndex = 20;
+            this.btmod.Text = "mod";
+            this.btmod.UseVisualStyleBackColor = true;
+            this.btmod.Click += new System.EventHandler(this.operadores);
             // 
-            // bt_trocasinal
+            // bttrocasinal
             // 
-            this.bt_trocasinal.Enabled = false;
-            this.bt_trocasinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_trocasinal.Location = new System.Drawing.Point(41, 244);
-            this.bt_trocasinal.Name = "bt_trocasinal";
-            this.bt_trocasinal.Size = new System.Drawing.Size(68, 31);
-            this.bt_trocasinal.TabIndex = 19;
-            this.bt_trocasinal.Text = "+/-";
-            this.bt_trocasinal.UseVisualStyleBackColor = true;
-            this.bt_trocasinal.Click += new System.EventHandler(this.bt_trocasinal_Click);
+            this.bttrocasinal.Enabled = false;
+            this.bttrocasinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttrocasinal.Location = new System.Drawing.Point(41, 244);
+            this.bttrocasinal.Name = "bttrocasinal";
+            this.bttrocasinal.Size = new System.Drawing.Size(68, 31);
+            this.bttrocasinal.TabIndex = 19;
+            this.bttrocasinal.Text = "+/-";
+            this.bttrocasinal.UseVisualStyleBackColor = true;
+            this.bttrocasinal.Click += new System.EventHandler(this.bttrocasinal_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 379);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.bt_trocasinal);
+            this.Controls.Add(this.btapagar);
+            this.Controls.Add(this.btvirgula);
+            this.Controls.Add(this.btmod);
+            this.Controls.Add(this.bttrocasinal);
             this.Controls.Add(this.txthistorico);
             this.Controls.Add(this.txtresult);
             this.Controls.Add(this.btmult);
@@ -347,10 +348,10 @@
         private System.Windows.Forms.Button btlimpar;
         private System.Windows.Forms.MaskedTextBox txtresult;
         private System.Windows.Forms.MaskedTextBox txthistorico;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button bt_trocasinal;
+        private System.Windows.Forms.Button btapagar;
+        private System.Windows.Forms.Button btvirgula;
+        private System.Windows.Forms.Button btmod;
+        private System.Windows.Forms.Button bttrocasinal;
     }
 }
 

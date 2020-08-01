@@ -16,17 +16,17 @@ namespace Aula_18___Caluladora
         string operador;
 
         // MÉTODOS
-        private void Limpar()
+        private void Limpar()   // METODO LIMPAR
         {
             total = 0;
             ultimoNumero = 0;
             operador = "+";
             txtresult.Text = "0";
             txthistorico.Text = "";
-            bt_trocasinal.Enabled = true;
+            bttrocasinal.Enabled = true;
         }
 
-        private void Calcular()
+        private void Calcular()   // METODO CALCULAR
         {
             switch (operador)
             {
@@ -39,7 +39,7 @@ namespace Aula_18___Caluladora
                 case "x":
                     total *= ultimoNumero;
                     break;
-                case "/":
+                case "÷":
                     total /= ultimoNumero;
                     break;
                 case "mod":
@@ -61,7 +61,7 @@ namespace Aula_18___Caluladora
         }
 
         // FUNÇÕES DE CLIQUE DE BOTÕES
-        private void gerarnumero(object sender, EventArgs e)
+        private void gerarnumero(object sender, EventArgs e)   // FUNÇÃO GERAR NÚMERO
         {
             if (ultimoNumero == 0)
             {
@@ -87,38 +87,57 @@ namespace Aula_18___Caluladora
             }
 
             ultimoNumero = Convert.ToDouble(txtresult.Text);
-            bt_trocasinal.Enabled = true;
+            bttrocasinal.Enabled = true;
+            btapagar.Enabled = true;
         }
 
-        private void operadores(object sender, EventArgs e)
+        private void operadores(object sender, EventArgs e)   // FUNÇÃO OPERADORES
         {
             // verificaçãose a ultima letra é "=" no campo do histórico do calculo
             if (txthistorico.Text.EndsWith("="))
             {
-                txthistorico.Text = txtresult.Text + (sender as Button).Text;
+                txthistorico.Text = " " + txtresult.Text + " " + (sender as Button).Text;
             }
             else
             {
-                txthistorico.Text = txthistorico.Text + txtresult.Text + (sender as Button).Text;
+                txthistorico.Text = " " + txthistorico.Text + " " + txtresult.Text + " " + (sender as Button).Text;
             }
 
             ultimoNumero = Convert.ToDouble(txtresult.Text);
             Calcular();
             operador = (sender as Button).Text;
-            bt_trocasinal.Enabled = false;
+            bttrocasinal.Enabled = false;
+            btapagar.Enabled = false;
         }
 
-        private void btresult_Click(object sender, EventArgs e)
+        private void btresult_Click(object sender, EventArgs e)   // BOTÃO RESULTADO
         {
-            txthistorico.Text = txthistorico.Text + txtresult.Text + (sender as Button).Text;
+            txthistorico.Text = txthistorico.Text + " " + txtresult.Text + " " + (sender as Button).Text;
             ultimoNumero = Convert.ToDouble(txtresult.Text);
             Calcular();
             operador = "+";
             total = 0;
-            bt_trocasinal.Enabled = true;
+            bttrocasinal.Enabled = true;
+            btapagar.Enabled = true;
         }
 
-        private void bt_trocasinal_Click(object sender, EventArgs e)
+        private void btapagar_Click(object sender, EventArgs e)   // BOTÃO APAGAR
+        {
+            string apagar;
+            if (txtresult.TextLength == 1) // zera se so tiver um numero
+            {
+                txtresult.Text = "0";
+                ultimoNumero = 0;
+            }
+            else
+            {
+                apagar = txtresult.Text;
+                txtresult.Text = apagar.Remove(apagar.Length - 1);
+                // TAMBEM PODE FAZER ASSIM:  txtresult.Text = apagar.Substring(0, (apagar.Length - 1));              
+            }
+        }
+
+        private void bttrocasinal_Click(object sender, EventArgs e)   // BOTÃO TROCAR SINAL (+/-)
         {
             trocaSinal = Convert.ToDouble(txtresult.Text) * (-1);
             txtresult.Text = trocaSinal.ToString();
@@ -130,4 +149,5 @@ namespace Aula_18___Caluladora
         }     
     }
 }
-// depois verificar como alterar para que ao clicar no botão operador mais de uma vz não fiu fazendo contas sem digitar numeros
+// depois verificar como alterar para que ao clicar no botão operador mais de uma vez não fique fazendo contas sem digitar numeros
+// ao apagar um numero negativo fica o sinal - e se for fazer uma operação da erro
