@@ -1,4 +1,4 @@
-﻿namespace Aula_18___Caluladora
+﻿namespace Caluladora
 {
     partial class Form1
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bt7 = new System.Windows.Forms.Button();
             this.bt8 = new System.Windows.Forms.Button();
             this.bt9 = new System.Windows.Forms.Button();
@@ -230,21 +231,23 @@
             // 
             // txtresult
             // 
-            this.txtresult.Enabled = false;
             this.txtresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtresult.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtresult.Location = new System.Drawing.Point(41, 53);
             this.txtresult.Name = "txtresult";
+            this.txtresult.ReadOnly = true;
             this.txtresult.Size = new System.Drawing.Size(286, 31);
             this.txtresult.TabIndex = 17;
             this.txtresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txthistorico
             // 
-            this.txthistorico.Enabled = false;
             this.txthistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthistorico.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txthistorico.Location = new System.Drawing.Point(41, 28);
             this.txthistorico.Name = "txthistorico";
+            this.txthistorico.ReadOnly = true;
+            this.txthistorico.RejectInputOnFirstFailure = true;
             this.txthistorico.Size = new System.Drawing.Size(286, 26);
             this.txthistorico.TabIndex = 18;
             this.txthistorico.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -321,6 +324,7 @@
             this.Controls.Add(this.bt9);
             this.Controls.Add(this.bt8);
             this.Controls.Add(this.bt7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Calculadora";
             this.ResumeLayout(false);

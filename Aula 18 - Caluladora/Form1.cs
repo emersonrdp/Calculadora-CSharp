@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Aula_18___Caluladora
+namespace Caluladora
 {
     public partial class Form1 : Form
     {
         double total, ultimoNumero, trocaSinal;
         string operador;
+
 
         // MÉTODOS
         private void Limpar()   // METODO LIMPAR
@@ -25,6 +26,7 @@ namespace Aula_18___Caluladora
             txthistorico.Text = "";
             bttrocasinal.Enabled = true;
         }
+
 
         private void Calcular()   // METODO CALCULAR
         {
@@ -43,7 +45,7 @@ namespace Aula_18___Caluladora
                     total /= ultimoNumero;
                     break;
                 case "mod":
-                    total = total % ultimoNumero;
+                    total %= ultimoNumero;
                     break;
                 /*case "%":
                     total = total * ( 1 + ( ultimoNumero / 100 );
@@ -54,11 +56,13 @@ namespace Aula_18___Caluladora
             txtresult.Text = total.ToString();
         }
         
+
         public Form1()
         {
             InitializeComponent();
             Limpar();
         }
+
 
         // FUNÇÕES DE CLIQUE DE BOTÕES
         private void gerarnumero(object sender, EventArgs e)   // FUNÇÃO GERAR NÚMERO
@@ -70,7 +74,7 @@ namespace Aula_18___Caluladora
                     Ao digitar numero nunca vai mostrar o numero no histórico, so é mostrado no hitórico ao lançar o operador
                     ou o resultado.*/
 
-                 if ((sender as Button).Text == "," || txtresult.Text == "0,")
+                 if ((sender as Button).Text == "," || txtresult.Text == "0,")   // tratamento de casas decimais iniciadas com zero
                  {
                      txtresult.Text = txtresult.Text + (sender as Button).Text;
                  }
@@ -91,6 +95,7 @@ namespace Aula_18___Caluladora
             btapagar.Enabled = true;
         }
 
+
         private void operadores(object sender, EventArgs e)   // FUNÇÃO OPERADORES
         {
             // verificaçãose a ultima letra é "=" no campo do histórico do calculo
@@ -110,6 +115,7 @@ namespace Aula_18___Caluladora
             btapagar.Enabled = false;
         }
 
+
         private void btresult_Click(object sender, EventArgs e)   // BOTÃO RESULTADO
         {
             txthistorico.Text = txthistorico.Text + " " + txtresult.Text + " " + (sender as Button).Text;
@@ -120,6 +126,7 @@ namespace Aula_18___Caluladora
             bttrocasinal.Enabled = true;
             btapagar.Enabled = true;
         }
+
 
         private void btapagar_Click(object sender, EventArgs e)   // BOTÃO APAGAR
         {
@@ -137,13 +144,15 @@ namespace Aula_18___Caluladora
             }
         }
 
+
         private void bttrocasinal_Click(object sender, EventArgs e)   // BOTÃO TROCAR SINAL (+/-)
         {
             trocaSinal = Convert.ToDouble(txtresult.Text) * (-1);
             txtresult.Text = trocaSinal.ToString();
         }
 
-        private void btlimpar_Click(object sender, EventArgs e)
+
+        private void btlimpar_Click(object sender, EventArgs e)   // BOTÃO LIMPAR
         {
             Limpar();
         }     
@@ -151,3 +160,4 @@ namespace Aula_18___Caluladora
 }
 // depois verificar como alterar para que ao clicar no botão operador mais de uma vez não fique fazendo contas sem digitar numeros
 // ao apagar um numero negativo fica o sinal - e se for fazer uma operação da erro
+// verificar porque divisão por zero mostrasimbolo do infinito
